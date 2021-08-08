@@ -1,4 +1,4 @@
-# Recommender_Systems
+# Recommender Systems
 
 Recommender systems can be classified into 3 types:
 - Simple recommenders: offer generalized recommendations to every user, based on popularity and/or genre.

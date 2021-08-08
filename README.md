@@ -10,5 +10,9 @@ similar to it.
 - Collaborative filtering engines: these systems try to predict the rating or preference that a user would give an item-based on past ratings and preferences of 
 other users. Collaborative filters don't require item metadata. 
 
+## Simple recommenders
 
+## Content-based recommenders
+
+## Collaborative filtering
 

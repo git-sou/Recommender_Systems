@@ -12,14 +12,17 @@ similar to it.
 other users. Collaborative filters don't require item metadata. 
 
 ## Movies metadata
+In this section, you will build a simplified clone of IMDB Top 250 Movies using metadata collected from IMDB.
 
 ### Simple recommenders
-As described in the previous section, simple recommenders are basic systems that recommends the top items based on a certain metric or score. In this section, you will build a simplified clone of IMDB Top 250 Movies using metadata collected from IMDB.
+As described in the previous section, simple recommenders are basic systems that recommends the top items based on a certain metric or score. 
 The following are the steps involved:
-Decide on the metric or score to rate movies on. 
-Calculate the score for every movie. 
-Sort the movies based on the score and output the top results.
-One of the most basic metrics you can think of is the rating. However, using this metric has a few caveats. For one, it does not take into consideration the popularity of a movie. Therefore, a movie with a rating of 9 from 10 voters will be considered 'better' than a movie with a rating of 8.9 from 10,000 voters.
+- Decide on the metric or score to rate movies on. 
+- Calculate the score for every movie. 
+- Sort the movies based on the score and output the top results.
+
+#### Metric
+One of the most basic metrics you can think of is the rating. However, using this metric has a few caveats. For one, it doesn't take into consideration the popularity of a movie. Therefore, a movie with a rating of 9 from 10 voters will be considered 'better' than a movie with a rating of 8.9 from 10,000 voters.
 
 On a related note, this metric will also tend to favor movies with smaller number of voters with skewed and/or extremely high ratings. As the number of voters increase, the rating of a movie regularizes and approaches towards a value that is reflective of the movie's quality. It is more difficult to discern the quality of a movie with extremely few voters.
 
@@ -29,10 +32,10 @@ Since you are trying to build a clone of IMDBs Top 250, you will use its weighte
 
 Weighted Rating (WR) =  (vv+m.R)+(mv+m.C)
 where,
-v is the number of votes for the movie;
-m is the minimum votes required to be listed in the chart;
-R is the average rating of the movie; And
-C is the mean vote across the whole report
+- v is the number of votes for the movie;
+- m is the minimum votes required to be listed in the chart;
+- R is the average rating of the movie; And
+- C is the mean vote across the whole report
 You already have the values to v (vote_count) and R (vote_average) for each movie in the dataset. It is also possible to directly calculate C from this data.
 
 What you need to determine is an appropriate value for m, the minimum votes required to be listed in the chart. There is no right value for m. You can view it as a preliminary negative filter that ignores movies which have less than a certain number of votes. The selectivity of your filter is up to your discretion.

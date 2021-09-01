@@ -52,7 +52,7 @@ I computed Term Frequency-Inverse Document Frequency (TF-IDF) vectors for each d
 This gave me a matrix where each column represents a word in the overview vocabulary and each column represents a movie. Then I computed a similarity score. There are several candidates:
 - Euclidean
 - Pearson
-- Cosine similarity 
+- Cosine similarity
 
 Again, there is no right answer to which score is the best. Different scores work well in different scenarios and it is often a good idea to experiment with different metrics.
 
@@ -61,7 +61,7 @@ I used the cosine similarity to calculate the similarity between two movies. Cos
 <img src="https://user-images.githubusercontent.com/83417933/131520810-5a43ab61-ce91-474d-b626-23d3d7f13796.png" />
 </p>
 
-Then I built my recommender as follow:
+Then I built my recommender as follows:
 - Get the index of the movie given its title
 - Get the list of cosine similarity scores for that particular movie with all movies
 - Sort the list based on the similarity scores
@@ -73,8 +73,26 @@ Result:
 We see that, while my system has done a decent job of finding movies with similar plot descriptions, the quality of recommendations is not that great. "The Dark Knight Rises" returns all Batman movies while it more likely that the people who liked that movie are more inclined to enjoy other Christopher Nolan movies. This is something that cannot be captured by your present system.
 
 #### Credits, Genres and Keywords based recommender
+Then, I built a recommender based on the following metadata: the 3 top actors, the director, related genres and the movie plot keywords.
+
+The keywords, cast and crew data is not available in our current dataset so the first step would be to load and merge them into your main DataFrame. 
+
+Then, metadata are not suitable to handle them. So, I transformed them to get our target features. 
+
+The next step would be to convert the names and keyword instances into lowercase and strip all the spaces between them. This is done so that your vectorizer doesn't count the Johnny of "Johnny Depp" and "Johnny Galecki" as the same. After this processing step, the aforementioned actors will be represented as "johnnydepp" and "johnnygalecki" and will be distinct to your vectorizer.
+
+You are now in a position to create a "metadata soup", which is a string that contains all the metadata that we want to feed to our vectorizer: actors, director and keywords.
+
+The next steps are the same as what I did with your plot description based recommender. One important difference is that I use the CountVectorizer() instead of TF-IDF. This is because we don't want to down-weight the presence of an actor/director if he or she has acted or directed in relatively more movies. It doesn't make much intuitive sense.
+
+Result:
+
+We see that your recommender has been successful in capturing more information thanks to more metadata and has given you better recommendations.
 
 ## MovieLens data
 
 ### Collaborative filtering
+Collaborative filters can further be classified into two types:
+- User-based Filtering: these systems recommend products to a user that similar users have liked
+- Item-based Filtering: these systems are almost similar to the content recommendation engine that you built. These systems identify similar items based on how people have rated it in the past.
 

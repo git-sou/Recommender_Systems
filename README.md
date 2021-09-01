@@ -95,4 +95,3 @@ We see that your recommender has been successful in capturing more information t
 Collaborative filters can further be classified into two types:
 - User-based Filtering: these systems recommend products to a user that similar users have liked
 - Item-based Filtering: these systems are almost similar to the content recommendation engine that you built. These systems identify similar items based on how people have rated it in the past.
-

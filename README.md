@@ -4,12 +4,12 @@ Recommender systems are among the most popular applications of data science toda
 Recommender systems can be classified into 3 types:
 - Simple recommenders: offer generalized recommendations to every user, based on popularity and/or genre.
 
-- Content-based recommenders: suggest similar items based on a particular item. This system uses item metadata, such as genre, author, description, etc. to make 
+- Content-based recommenders: suggest similar items based on a particular item. This system uses item metadata, such as genre, author, etc. to make 
 these recommendations. The general idea behind these recommender systems is that if a person liked a particular item, he or she will also like an item that is 
 similar to it.
 
 - Collaborative filtering engines: these systems try to predict the rating or preference that a user would give an item-based on past ratings and preferences of 
-other users. Collaborative filters don't require item metadata. 
+other users.
 
 ## Movies metadata
 In this section, you will build a simplified clone of IMDB Top 250 Movies using metadata collected from IMDB.

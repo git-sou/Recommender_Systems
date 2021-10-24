@@ -74,13 +74,9 @@ We see that, while my system has done a decent job of finding movies with simila
 #### Credits, Genres and Keywords based recommender
 Then, I built a recommender based on the following metadata: the 3 top actors, the director, related genres and the movie plot keywords.
 
-The keywords, cast and crew data is not available in our current dataset so the first step would be to load and merge them into your main DataFrame. 
-
-Then, metadata are not suitable to handle them. So, I transformed them to get our target features. 
-
 The next step would be to convert the names and keyword instances into lowercase and strip all the spaces between them. This is done so that your vectorizer doesn't count the Johnny of "Johnny Depp" and "Johnny Galecki" as the same. After this processing step, the aforementioned actors will be represented as "johnnydepp" and "johnnygalecki" and will be distinct to your vectorizer.
 
-You are now in a position to create a "metadata soup", which is a string that contains all the metadata that we want to feed to our vectorizer: actors, director and keywords.
+I created a "metadata soup", which is a string that contains all the metadata that we want to feed to our vectorizer: actors, director and keywords.
 
 The next steps are the same as what I did with your plot description based recommender. One important difference is that I use the CountVectorizer() instead of TF-IDF. This is because we don't want to down-weight the presence of an actor/director if he or she has acted or directed in relatively more movies. It doesn't make much intuitive sense.
 

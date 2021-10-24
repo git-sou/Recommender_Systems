@@ -21,7 +21,7 @@ The following are the steps involved:
 - Sort the movies based on the score and output the top results.
 
 #### Metric
-One of the most basic metrics you can think of is the rating. However, using this metric has a few caveats. For one, it doesn't take into consideration the popularity of a movie. Therefore, a movie with a rating of 9 from 10 voters will be considered 'better' than a movie with a rating of 8.9 from 10,000 voters. So it is more difficult to discern the quality of a movie with extremely few voters.
+One of the most basic metrics you can think of is the rating. However, using this metric has a few caveats. For one, it doesn't take into consideration the popularity of a movie.
 
 It is necessary that you come up with a weighted rating (WR) that takes into account the average rating and the number of votes it has garnered. Mathematically, it is represented as follows:
 

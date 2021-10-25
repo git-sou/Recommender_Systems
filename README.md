@@ -37,8 +37,6 @@ where,
 
 We can get all the values except m whose we need to choose an appropriate value. There is no right value for m but it could be a preliminary negative filter. I chose the 90th percentile as your cutoff. In other words, the movie must have more votes than at least 90% of the movies in the list. As the percentile decreases, the number of movies considered increases.
 
-Result:
-
 ### Content-based recommenders
 
 #### Plot description based recommender

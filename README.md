@@ -67,10 +67,6 @@ Then I built my recommender as follows:
 - Get the top 10 elements of this list
 - Return the titles corresponding to the indices of the top elements
 
-Result:
-
-We see that, while my system has done a decent job of finding movies with similar plot descriptions, the quality of recommendations is not that great. "The Dark Knight Rises" returns all Batman movies while it more likely that the people who liked that movie are more inclined to enjoy other Christopher Nolan movies. This is something that cannot be captured by your present system.
-
 #### Credits, Genres and Keywords based recommender
 Then, I built a recommender based on the following metadata: the 3 top actors, the director, related genres and the movie plot keywords.
 

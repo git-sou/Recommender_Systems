@@ -15,12 +15,7 @@ In this section, you will build a simplified clone of IMDB Top 250 Movies using 
 
 ### Simple recommenders
 As described in the previous section, simple recommenders are basic systems that recommends the top items based on a certain metric or score. 
-The following are the steps involved:
-- Decide on the metric or score to rate movies on.
-- Calculate the score for every movie.
-- Sort the movies based on the score and output the top results.
 
-#### Metric
 One of the most basic metrics you can think of is the rating. However, using this metric has a few caveats. For one, it doesn't take into consideration the popularity of a movie.
 
 It is necessary that you come up with a weighted rating (WR) that takes into account the average rating and the number of votes it has garnered. Mathematically, it is represented as follows:

@@ -13,7 +13,7 @@ other users.
 ## Movies metadata
 In this section, you will build a simplified clone of IMDB Top 250 Movies using metadata collected from IMDB.
 
-### Simple recommenders
+### Simple recommender
 As described in the previous section, simple recommenders are basic systems that recommends the top items based on a certain metric or score. 
 
 One of the most basic metrics you can think of is the rating. However, using this metric has a few caveats. For one, it doesn't take into consideration the popularity of a movie.

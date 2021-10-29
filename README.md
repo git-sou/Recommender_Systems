@@ -62,10 +62,6 @@ I created a "metadata soup", which is a string that contains all the metadata th
 
 The next steps are the same as what I did with your plot description based recommender. One important difference is that I use the CountVectorizer() instead of TF-IDF. This is because we don't want to down-weight the presence of an actor/director if he or she has acted or directed in relatively more movies. It doesn't make much intuitive sense.
 
-Result:
-
-We see that your recommender has been successful in capturing more information thanks to more metadata and has given you better recommendations.
-
 ## MovieLens data
 
 ### Collaborative filtering

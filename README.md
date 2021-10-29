@@ -53,13 +53,6 @@ I used the cosine similarity to calculate the similarity between two movies. Cos
 <img src="https://user-images.githubusercontent.com/83417933/131520810-5a43ab61-ce91-474d-b626-23d3d7f13796.png" />
 </p>
 
-Then I built my recommender as follows:
-- Get the index of the movie given its title
-- Get the list of cosine similarity scores for that particular movie with all movies
-- Sort the list based on the similarity scores
-- Get the top 10 elements of this list
-- Return the titles corresponding to the indices of the top elements
-
 #### Credits, Genres and Keywords based recommender
 Then, I built a recommender based on the following metadata: the 3 top actors, the director, related genres and the movie plot keywords.
 

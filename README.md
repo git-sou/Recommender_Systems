@@ -67,4 +67,4 @@ The next steps are the same as what I did with your plot description based recom
 ### Collaborative filtering
 Collaborative filters can further be classified into two types:
 - User-based Filtering: these systems recommend products to a user that similar users have liked
-- Item-based Filtering: these systems are almost similar to the content recommendation engine that you built. These systems identify similar items based on how people have rated it in the past.
+- Item-based Filtering: these systems are almost similar to the content recommendation engine. These systems identify similar items based on how people have rated it in the past.
